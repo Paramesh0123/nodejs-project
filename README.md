@@ -29,16 +29,16 @@
 # mongosh
 
 # To switch to the database, use:
-# use <db-name>
+# use users; #here users is the database
 
 # To list the users in the particular database, use:
-# db.<db-name>.find()
+# db.users.find()
 
 # To delete a particular user in the database, use:
-# db.<db-name>.deleteOne({ name: "username" });
+# db.users.deleteOne({ name: "username" });
 
 # To delete all the users in the database, use:
-# db.<db-name>.deleteMany({});
+# db.users.deleteMany({});
 
 # PM2 is a production process manager for Node.js applications with a built-in load balancer. 
 # It allows you to keep applications alive forever, to reload them without downtime and to facilitate common system admin tasks.
@@ -54,16 +54,16 @@
 # pm2 list
 
 # To view more details on a specific application,use:
-# pm2 describe <id|server.js>
+# pm2 describe id|server.js
 
 # To stop the specific application, use:
-# pm2 stop <id|server.js>
+# pm2 stop id|server.js
 
 # To restart the specific application, use:
-# pm2 restart <id|server.js>
+# pm2 restart id|server.js
 
 # To delete the specific application, use:
-# pm2 delete <id|server.js>
+# pm2 delete id|server.js
 
 # To monitor logs, custom metrics, application information, use:
 # pm2 monit
