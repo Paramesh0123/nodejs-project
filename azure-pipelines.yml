@@ -1,0 +1,17 @@
+trigger:
+  - main
+
+pool:
+  name: nodejs-linux
+  vmImage: 'nodejs-linux-01'
+
+stages:
+  - stage: Build
+    displayName: Build Stage
+    jobs: 
+      - job: Build
+        steps:
+          - script: |
+              npm install express
+              sudo npm install pm2 -g
+              pm2 start server.js
