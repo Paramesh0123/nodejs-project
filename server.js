@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/users', {
+mongoose.connect('mongodb://mongo_db:27017/users', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });

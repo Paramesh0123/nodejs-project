@@ -1,0 +1,15 @@
+version: "2.3"
+
+services:
+  webapp:
+    image: rojaparamesh/webapp:v2
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo_db
+
+  mongo_db:
+    image: rojaparamesh/mongo:v1
+    ports:
+      - "27017:27017"
+
