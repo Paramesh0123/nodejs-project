@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - My Web App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact Us</a>
+            <a href="/login">Login</a>
+	    <a href="/Register">Register</a>
+        </div>
+    </header>
+    <main>
+        <h1>Login</h1>
+        <form action="/login" method="POST">
+           <input type="text" name="name" placeholder="name" required>
+           <input type="password" name="password" placeholder="Password" required>
+           <button type="submit">Login</button>
+        </form>
+	<script>
+           document.getElementById('loginForm').addEventListener('submit', function(event) {
+              event.preventDefault(); // Prevent the default form submission
+
+              const email = document.getElementById('name').value;
+              const password = document.getElementById('password').value;
+
+              fetch('http://localhost:3000/login', {
+                 method: 'POST',
+                 headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, password }),
+              })
+              .then(response => response.json())
+              .then(data => console.log(data))
+              .catch(error => console.error('Error:', error));
+           });
+    </script>
+	<p>Don't have an account? <a href="/register">Register here</a></p>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Web App</p>
+    </footer>
+</body>
+</html>
