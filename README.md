@@ -74,3 +74,11 @@
 # Once container was created, login to the container using:
 # docker exec -it mongodb /bin/bash
 
+# To communicate the docker containers between them, 
+# first create a docker network
+# secondly attach the docker network to the container creating, using: docker run -d -p 3000:3000 --name webapp --network=nodejs-app rojaparamesh/webapp:v1
+# Now, create a docker container for mongodb as well, using: docker run -d --name mongodb --network=nodejs-app rojaparamesh/mongo:v1
+# Now, try to run your application on the browser, using: http://<server-ip>:3000 and test it by creating the user in the register section.
+
+
+
