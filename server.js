@@ -112,5 +112,5 @@ app.get('/contact', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on http://3.7.46.183:${PORT}`);
 });
