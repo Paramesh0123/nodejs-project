@@ -8,7 +8,9 @@ const PORT = process.env.PORT || 3000;
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/users', {
+const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/users';
+
+mongoose.connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
