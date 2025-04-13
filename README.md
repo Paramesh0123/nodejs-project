@@ -15,7 +15,7 @@
 # systemctl status mongod.service
 
 # Now, configure the mongodb in /etc/mongod.conf path, like:
-# Add the server ip where mongodb is installed. ex: 127.0.0.1,<server-ip>
+# Add the server ip where mongodb is installed. ex: 127.0.0.1,<server-ip>, if it was aws instance add 0.0.0.0 in bindip in #the above path
 
 # Now login to the mongo shell, using 'mongosh'.
 # create a database using, 'use users'
