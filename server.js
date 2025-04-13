@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://mongodb:27017/users', {
+mongoose.connect('mongodb://localhost:27017/users', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
@@ -112,5 +112,5 @@ app.get('/contact', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on http://192.168.49.2:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
