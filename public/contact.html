@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - My Web App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact Us</a>
+            <a href="/login">Login</a>
+            <a href="/Register">Register</a>
+        </div>
+    </header>
+    <main>
+       <h1>Contact Us</h1>
+       <p>If you have any questions, feel free to reach out!</p>
+       <h2>Contact Details</h2>
+       <p>Email: devopsreddy08@outlook.com</p>
+       <p>Phone: +91-9059576080</p>
+       <h2>Send Us a Message</h2>
+       <form action="/contact" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+       </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Web App</p>
+    </footer>
+</body>
+</html>
